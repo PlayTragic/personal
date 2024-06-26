@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>replace</title>
+    <style>
+        div {
+            width: 70vw;
+            text-align: left;
+        }
+
+        #gen {
+            width: 40vw;
+            height: 50vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <label for="model">모델명 [Model name]</label>
+        <input type="text" id="model" name="model" /> <br>
+        <label for="color">색상 [Color]</label>
+        <input type="text" id="color" name="color" /> <br>
+        <label for="size">사이즈 [Size]</label>
+        <input type="text" id="size" name="size" />
+        <br>
+        <button onclick="onPress()">generate</button>
+        <br>
+        모델명: <span class="model">TEXT</span><br>
+        색상: <span class="color">TEXT</span><br>
+        사이즈: <span class="size">TEXT</span><br><br>
+        사이즈 잘 보고 구매하세요, 환불 안해드립니다. <br>
+        택배비 미포함입니다. (+4000원) <br><br><br>
+    </div>
+</body>
+<script>
+    function onPress() {
+        document.getElementsByClassName('model')[0].innerText = document.getElementById('model').value;
+        document.getElementsByClassName('color')[0].innerText = document.getElementById('color').value;
+        document.getElementsByClassName('size')[0].innerText = document.getElementById('size').value;
+    }
+
+</script>
+
+</html>
